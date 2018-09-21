@@ -1,5 +1,5 @@
 .main:
-	# Start with ans = fact(0) = 1
+	; Start with ans = fact(0) = 1
 	push 200
 	push 1
 	store
@@ -12,43 +12,43 @@
 	putchar
 	jmp .print
 .read_input:
-	# Read value of n
+	; Read value of n
 	pop
 	push 100
 	read
 	push 0
 
-	# Check for fact(0)
+	; Check for fact(0)
 	copy
 	push 100
 	access
 	sub
 	jz .fact0
 .fact:
-	# Increment counter
+	; Increment counter
 	push 1
 	add
 
-	# Mul current ans by the counter
+	; Mul current ans by the counter
 	copy
 	push 200
 	access
 	mul
 
-	# Print ans
+	; Print ans
 	copy
 	puts
 
-	# Store ans
+	; Store ans
 	push 200
 	swap
 	store
 
-	# Print new line
+	; Print new line
 	push 10
 	putchar
 
-	# End loop if counter == n
+	; End loop if counter == n
 	copy
 	push 100
 	access

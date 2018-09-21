@@ -197,6 +197,9 @@ def parse_labels(memory: Memory):
         if '#' in line:
             line = line.split('#')[0]
 
+        if ';' in line:
+            line = line.split(';')[0]
+
         memory.program[i] = line
 
         if line == '':

@@ -1,7 +1,7 @@
 .main:
 	push 100
 .loop:
-	# Print number of bottles
+	; Print number of bottles
 	copy
 	puts
 
@@ -16,7 +16,7 @@
 	push " bottles of beer"
 	call .print
 
-	# Subtract 1 bottle
+	; Subtract 1 bottle
 	copy
 	push 1
 	swap
@@ -34,7 +34,7 @@
 	push " bottles of beer on the wall."
 	call .print
 
-	# Check for end of loop
+	; Check for end of loop
 	copy
 	jz .end
 	jmp .loop
